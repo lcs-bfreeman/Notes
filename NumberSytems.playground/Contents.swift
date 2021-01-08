@@ -15,3 +15,6 @@ var str = "Hello, playground"
 13 / 2
 
 
+// find the digits that represent 479 in binary
+// we know this is () in Base 2
+// exampls
