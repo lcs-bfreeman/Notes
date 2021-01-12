@@ -48,34 +48,6 @@ var str = "Hello, playground"
 //1 1101 1111
 //lets convert base 10 76 too base 2
 
-// creates constant with value of 76
-// a constant canot be changed once created
-let valueToConvert = 17
-// creates a variable with value of "valueToConvert
-// a variable can be changed
-var decimalValueLeftToConvert = valueToConvert
-// this creates an empty string
-// a string is just text, like "hello"
-var binaryRepresentation = " "
-
-// the abstraction we will use is a loop
-// our end condition is that the decimalValueLeftToConvert is = to 0
-// as long as condition is treu the code in the braket will repeate
-while decimalValueLeftToConvert > 0 {
-    
-    // get the next binary digit
-    let nextBinaryDigit = decimalValueLeftToConvert % 2
-    
-    // add that new digit to  the binary representation
-    // swift is a strictly type language
-    // it does not automatically convert data typres
-    // so, to make the Int into a strng we need to specify this
-    binaryRepresentation = String(nextBinaryDigit) + binaryRepresentation
-    
-    // get the decimal value left to convert
-    decimalValueLeftToConvert = decimalValueLeftToConvert / 2
-}
-binaryRepresentation
 
 
 // Functions are a way to group/incapculate related behavior
@@ -85,4 +57,49 @@ binaryRepresentation
  
  Basic syntax of a function
  
- func functionName(Partner*/
+ func functionName(parameter, parameter2, ...) return type {
+ 
+ }
+ 
+ 
+ */
+// get the binary representation of a value
+func getBinaryRepresentation(of valueToConvert: Int) -> String{
+    
+    // creates a variable with value of "valueToConvert
+    // a variable can be changed
+    var decimalValueLeftToConvert = valueToConvert
+    // this creates an empty string
+    // a string is just text, like "hello"
+    var binaryRepresentation = " "
+
+    // the abstraction we will use is a loop
+    // our end condition is that the decimalValueLeftToConvert is = to 0
+    // as long as condition is treu the code in the braket will repeate
+    while decimalValueLeftToConvert > 0 {
+        
+        // get the next binary digit
+        let nextBinaryDigit = decimalValueLeftToConvert % 2
+        
+        // add that new digit to  the binary representation
+        // swift is a strictly type language
+        // it does not automatically convert data typres
+        // so, to make the Int into a strng we need to specify this
+        binaryRepresentation = String(nextBinaryDigit) + binaryRepresentation
+        
+        // get the decimal value left to convert
+        decimalValueLeftToConvert = decimalValueLeftToConvert / 2
+    }
+    
+    return binaryRepresentation
+
+}
+
+// call,  or use the function
+getBinaryRepresentation(of: 10)
+
+900 % 8
+900 / 8
+
+112 % 8
+112 / 8
