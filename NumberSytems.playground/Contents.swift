@@ -7,11 +7,12 @@ var str = "Hello, playground"
 // use the remandor operator to get the first binary digit
 // the remainder operator is %
 27 % 2
-// find the value left to conver
-// the devision operator is /
+// he value left to convert
 27 / 2
 
+// binary digit
 13 % 2
+//lrft to covert
 13 / 2
 
 6 % 2
@@ -45,3 +46,43 @@ var str = "Hello, playground"
 1 % 2
 1 / 2
 //1 1101 1111
+//lets convert base 10 76 too base 2
+
+// creates constant with value of 76
+// a constant canot be changed once created
+let valueToConvert = 17
+// creates a variable with value of "valueToConvert
+// a variable can be changed
+var decimalValueLeftToConvert = valueToConvert
+// this creates an empty string
+// a string is just text, like "hello"
+var binaryRepresentation = " "
+
+// the abstraction we will use is a loop
+// our end condition is that the decimalValueLeftToConvert is = to 0
+// as long as condition is treu the code in the braket will repeate
+while decimalValueLeftToConvert > 0 {
+    
+    // get the next binary digit
+    let nextBinaryDigit = decimalValueLeftToConvert % 2
+    
+    // add that new digit to  the binary representation
+    // swift is a strictly type language
+    // it does not automatically convert data typres
+    // so, to make the Int into a strng we need to specify this
+    binaryRepresentation = String(nextBinaryDigit) + binaryRepresentation
+    
+    // get the decimal value left to convert
+    decimalValueLeftToConvert = decimalValueLeftToConvert / 2
+}
+binaryRepresentation
+
+
+// Functions are a way to group/incapculate related behavior
+// once a behavior is inside a function, the complexity is hiden
+// we can use or call the function whatever we want
+/*
+ 
+ Basic syntax of a function
+ 
+ func functionName(Partner*/
