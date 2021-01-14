@@ -51,6 +51,15 @@ var str = "Hello, playground"
 
 // enumeration
 // an enumeration simpy lists posibilities
+// the : Int... that defines the type of the raw value associated with a case
+// this is another example of abstraction
+// - hides cmoplexity and makes the call site easier to read
+// e.g.: gatAlternateRepresentation(of: 17, inBase: .binary
+enum NumberSyetemBase: Int {
+    case binary = 2
+    case octol = 8
+    case hexadecimal = 16
+}
 
 
 // Functions are a way to group/incapculate related behavior
@@ -68,11 +77,11 @@ var str = "Hello, playground"
  */
 // get the alternate representation of a value in a different base
 
-func getAlternateRepresentation(of valueToConvert: Int, inBase base: Int) -> String{
+func getAlternateRepresentation(of valueToConvert: Int, inBase base: NumberSyetemBase) ->           String{
     
     // creates a variable with value of "valueToConvert
     // a variable can be changed
-    var decimalValueLeftToConvert = valueToConvert
+    var valueLeftToConvert = valueToConvert
     // this creates an empty string
     // a string is just text, like "hello"
     var representation = " "
@@ -80,19 +89,47 @@ func getAlternateRepresentation(of valueToConvert: Int, inBase base: Int) -> Str
     // the abstraction we will use is a loop
     // our end condition is that the decimalValueLeftToConvert is = to 0
     // as long as condition is treu the code in the braket will repeate
-    while decimalValueLeftToConvert > 0 {
+    while valueLeftToConvert > 0 {
         
         // get the next digit
-        let nextDigit = decimalValueLeftToConvert % base
+        let nextDigit = valueLeftToConvert % base.rawValue
         
         // add that new digit to  the binary representation
         // swift is a strictly type language
         // it does not automatically convert data typres
         // so, to make the Int into a strng we need to specify this
-        representation = String(nextDigit) + representation
+        if base == .hexadecimal {
+            // an == is a comparison
+            //carefully set the next digit
+            //when somthing other then 0 to 9... use ABCDEF
+            // a switch statment evaluates some value
+            // and take different actions depending on the value
+            switch nextDigit {
+            case 0...9:
+                representation = String(nextDigit) + representation
+            case 10:
+                representation = "A" + representation
+            case 11:
+                representation = "B" + representation
+            case 12:
+                representation = "c" + representation
+            case 13:
+                representation = "D" + representation
+            case 14:
+                representation = "E" + representation
+            case 15:
+                representation = "F" + representation
+            default:
+                break
+            }
+        } else {
+            representation = String(nextDigit) + representation
+
+        }
+        
         
         // get the decimal value left to convert
-        decimalValueLeftToConvert = decimalValueLeftToConvert / base
+        valueLeftToConvert = valueLeftToConvert / base.rawValue
     }
     
     return representation
@@ -100,8 +137,8 @@ func getAlternateRepresentation(of valueToConvert: Int, inBase base: Int) -> Str
 }
 
 // call,  or use the function
-getAlternateRepresentation(of: 17, inBase: 2)
-getAlternateRepresentation(of: 17, inBase: 8)
-getAlternateRepresentation(of: 15, inBase: 16)
+getAlternateRepresentation(of: 17, inBase: .binary)
+getAlternateRepresentation(of: 17, inBase: .octol)
+getAlternateRepresentation(of: 17, inBase: .hexadecimal)
 
-getAlternateRepresentation(of: 14, inBase: 7)
+getAlternateRepresentation(of: 15, inBase: .hexadecimal)
