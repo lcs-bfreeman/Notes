@@ -142,8 +142,11 @@ print("Second last character is: \(secondLast)")
 // This will separate the output from the examples above from your work
 print("===== Exercise 1 begins =====")
 
+let name = "Benjamin Freeman"
 
-
+for singleCharacter in name {
+    print(singleCharacter)
+}
 /*:
 ### Exercise 2
 
@@ -152,14 +155,18 @@ Consider the phrase stored in the constant `aQuestion` below.
 Write code, in *two different ways*, that prints the single character 在 to the Debug area.
 
 */
-// This will separate the output from the code above from your work for this question
-print("===== Exercise 2 begins =====")
 
 // Create a string
+
 let aQuestion = "请问现在几点了?"
 
 // Write code to complete the exercise below...
 
+var symbol = aQuestion.index(aQuestion.startIndex, offsetBy: 3)
+
+let cheracter = aQuestion[symbol]
+
+print ( "Poopdex \(cheracter)" )
 /*:
 ### Exercise 3
 
@@ -177,5 +184,6 @@ Say that you wish to encrypt the word `pen` using a *rightward shift of three ch
 
 // Create the starting phrase
 let plainText = "pen"
+
 
 // Encrypt the starting phrase
