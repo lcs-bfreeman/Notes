@@ -25,8 +25,15 @@
  
  */
 // Type the code below this line...
-
-
+var dayOfWeek: String? = "Monday"
+if dayOfWeek != nil {
+    let day = dayOfWeek!
+    print ("The day is \(day)")
+} else {
+    print("no day was provided")
+}
+// The out put doesn't of the optional in it.
+//this is probably due to me creating a new variable to use in this scinario
 /*:
  
  Now, run the playground.

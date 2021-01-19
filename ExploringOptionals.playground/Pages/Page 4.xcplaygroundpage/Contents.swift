@@ -15,8 +15,15 @@
  
  */
 // Type the code below this line...
-
-
+var x: String?
+var y: String? = ""
+if x == y {
+    print ("variables are equal")
+} else {
+    print ("variables NOT equal")
+}
+//Is an empty string the same as a nil value?
+// no, they are not euqual, the y value even though there isn't anything in it it still has quotations and an = wich means it's value is whatever takes up a blank space
 /*:
  
  Is an empty string the same as a *nil* value?

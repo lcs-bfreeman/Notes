@@ -19,8 +19,14 @@
  
  */
 // Type the code below this line...
-
-
+var dayOfWeek: String? = "Monday"
+if dayOfWeek != nil {
+    print ("The day is \(dayOfWeek)")
+} else {
+    print("No day was provided")
+}
+// I thought it would have been nil becaseu there is no variable attaced to the variabel
+// now that there is a variable attached to dayOfWeek it = moday which confuses me
 /*:
  
  Now change line 22 to look like this:

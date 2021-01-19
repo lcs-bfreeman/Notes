@@ -11,6 +11,10 @@
  
  */
 // Type the code below this line...
+// it will = nil
+var x: Int?
+var y: Int?
 
-
+x! * y!
+// it spewd out a bunch of hexadecimal and other jargen
 //: [Next](@next)

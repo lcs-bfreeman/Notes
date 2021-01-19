@@ -77,3 +77,4 @@ let year: Int = 1989
 let height: Double = 1.78
 let cakeIsGood: Bool = true
 //Notice that booleans have the short type name Bool, in the same way that integers have the short type name Int.
+

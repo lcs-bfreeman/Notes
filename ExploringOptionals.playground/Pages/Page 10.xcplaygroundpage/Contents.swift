@@ -11,6 +11,10 @@
  
  */
 // Type the code below this line...
+// it will have an answere of either optional 0 or nil
+var x: Int = 0
+var y: Int
 
-
+x * y
+//it created an error saying that y has no value
 //: [Next](@next)

@@ -27,3 +27,4 @@
  
  */
 //: [I've made notes and I'm ready to begin!](@next)
+// Optionals indicate if a variable doesn't have a value

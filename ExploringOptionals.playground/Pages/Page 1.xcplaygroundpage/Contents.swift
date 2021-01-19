@@ -16,7 +16,8 @@
  What is the result?
  */
 // Type the code below this line
-
+var myName: String
+print(myName)
 
 /*:
  
@@ -37,9 +38,18 @@
  ![declare-optional](declare-optional.png)
  
  */
+/*error: Page 1.xcplaygroundpage:20:7: error: variable 'myName' used before being initialized
+print(myName)
+      ^
+
+Page 1.xcplaygroundpage:19:5: note: variable defined here
+var myName: String
+    ^
+ */
 // Type the second code example below...
 
-
+ var yourName :String?
+ print(yourName)
 /*:
  
  Run the playground again.
