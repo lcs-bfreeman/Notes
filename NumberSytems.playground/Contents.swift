@@ -46,6 +46,10 @@ var str = "Hello, playground"
 3 / 2
 1 % 2
 1 / 2
+
+13 / 10
+13 %  10
+
 //1 1101 1111
 //lets convert base 10 76 too base 2
 
@@ -142,3 +146,71 @@ getAlternateRepresentation(of: 17, inBase: .octol)
 getAlternateRepresentation(of: 17, inBase: .hexadecimal)
 
 getAlternateRepresentation(of: 15, inBase: .hexadecimal)
+
+
+
+
+
+
+
+
+
+
+
+
+// BINARY TO DECIMAL
+// base 2 to base 10
+
+
+
+// The value we are converting
+let value = "1011011"
+
+// what base are we converting form
+let base = 16.0
+
+//  The exponent value at the rightmost digit
+var exponent = 0.0
+
+
+// The current sum in decimal
+var decimalEquivalent = 0.0
+
+// Iterare over each character
+// From right to left!
+for character in value.reversed() {
+    
+
+    // Get the current digit as a Double
+    if let digit = Double(String(character)) {
+        // add the current sum
+      decimalEquivalent += digit * pow(base, exponent)
+        
+        // Increment the exponent (+1)
+      
+    }
+    else {
+        switch character {
+        case "A":
+        decimalEquivalent += 10.0 * pow(base, exponent)
+        case "B":
+        decimalEquivalent += 11.0 * pow(base, exponent)
+        case "C":
+        decimalEquivalent += 13.0 * pow(base, exponent)
+        case "D":
+        decimalEquivalent += 14.0 * pow(base, exponent)
+        case "E":
+        decimalEquivalent += 15.0 * pow(base, exponent)
+        case "F":
+        decimalEquivalent += 16.0 * pow(base, exponent)
+        
+        default:
+            break
+
+    }
+}
+    exponent += 1
+}
+// Whats the result?
+decimalEquivalent
+
