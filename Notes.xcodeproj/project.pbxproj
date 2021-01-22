@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D7117BCB25B9CE0C00461CEE /* Arrays, Operators, Conditions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Arrays, Operators, Conditions.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D728453625A8C976004CD633 /* Notes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Notes; sourceTree = BUILT_PRODUCTS_DIR; };
 		D728453925A8C976004CD633 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D728454125A8C9F1004CD633 /* NumberSytems.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NumberSytems.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -47,6 +48,7 @@
 		D728452D25A8C976004CD633 = {
 			isa = PBXGroup;
 			children = (
+				D7117BCB25B9CE0C00461CEE /* Arrays, Operators, Conditions.playground */,
 				D750BF7925B6510100644E8D /* Test_Playground.playground */,
 				D75B563B25B5F2B400D41172 /* ExploringOptionals.playground */,
 				D795939E25B200E500DCBAC9 /* ALookAtStrings.playground */,

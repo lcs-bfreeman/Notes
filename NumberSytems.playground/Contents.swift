@@ -161,14 +161,21 @@ getAlternateRepresentation(of: 15, inBase: .hexadecimal)
 // BINARY TO DECIMAL
 // base 2 to base 10
 
+func convertToDecimal (of value: String, from numberSystem: NumberSystemBase) ->   Double{
 
 
-// The value we are converting
-let value = "1011011"
-
+    
 // what base are we converting form
-let base = 16.0
+    var base = 0.0
 
+    switch numberSystem {
+    case .binary:
+    base = 2.0
+    case .octal:
+    base = 8.0
+    case .hexadecimal:
+        base = 16
+    }
 //  The exponent value at the rightmost digit
 var exponent = 0.0
 
@@ -196,13 +203,13 @@ for character in value.reversed() {
         case "B":
         decimalEquivalent += 11.0 * pow(base, exponent)
         case "C":
-        decimalEquivalent += 13.0 * pow(base, exponent)
+        decimalEquivalent += 12.0 * pow(base, exponent)
         case "D":
-        decimalEquivalent += 14.0 * pow(base, exponent)
+        decimalEquivalent += 13.0 * pow(base, exponent)
         case "E":
-        decimalEquivalent += 15.0 * pow(base, exponent)
+        decimalEquivalent += 14.0 * pow(base, exponent)
         case "F":
-        decimalEquivalent += 16.0 * pow(base, exponent)
+        decimalEquivalent += 15.0 * pow(base, exponent)
         
         default:
             break
@@ -211,6 +218,11 @@ for character in value.reversed() {
 }
     exponent += 1
 }
-// Whats the result?
-decimalEquivalent
+
+
+    return decimalEquivalent
+    
+}
+convertToDecimal(of: "1AF8",from:.hexadecimal)
+
 
