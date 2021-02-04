@@ -161,7 +161,7 @@ getAlternateRepresentation(of: 15, inBase: .hexadecimal)
 // BINARY TO DECIMAL
 // base 2 to base 10
 
-func convertToDecimal (of value: String, from numberSystem: NumberSystemBase) ->   Double{
+func convertToDecimal (of value: String, from numberSystem: NumberSyetemBase) ->   Double{
 
 
     
@@ -171,7 +171,7 @@ func convertToDecimal (of value: String, from numberSystem: NumberSystemBase) ->
     switch numberSystem {
     case .binary:
     base = 2.0
-    case .octal:
+    case .octol:
     base = 8.0
     case .hexadecimal:
         base = 16
@@ -223,6 +223,7 @@ for character in value.reversed() {
     return decimalEquivalent
     
 }
+
 convertToDecimal(of: "1AF8",from:.hexadecimal)
 
 
